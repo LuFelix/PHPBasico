@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html meta charset="utf-8"/>
+
+<header>
+<button>
+		Cadastrar
+	</button>
+	<button>
+		Listar
+	</button>
+	<button>
+		Editar
+	</button>
+	<button>
+		Excluir
+	</button>
+	<br><br>
+	
+</header>
+
+<body>
+
+<p>Escrevendo um parágrafo.</p>
+	
+	<ol> 
+		<li>Coffee</li>
+		<li>Tea</li>
+		<li>Milk</li>
+		<li>Juice</li>
+	</ol>
+	<ul>
+		<li>Coffee</li>
+		<li>Tea</li>
+		<li>Milk</li>
+		<li>Juice</li>
+	</ul>
+
+</body>
+
+<footer>
+</footer>
+
+</html>

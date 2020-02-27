@@ -1,0 +1,8 @@
+div {
+    width: 400px;
+    margin: 30px auto;
+    border: 1px solid #999;
+    padding: 25px;
+    border-radius: 7px;
+    box-shadow: 2px 2px 3px 1px #999;
+  }
