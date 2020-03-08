@@ -1,13 +1,18 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="functions.js"></script>
   <link href="stylesheet.css" type="text/css" rel="stylesheet" media="screen" />
   <style>h4{ display:inline;	}</style>
+  <script type="text/javascript">
+   
+  </script>
 </head>
 <body>
   <div>
@@ -15,6 +20,7 @@
     <a href="index.php" target="_self">Voltar</a><br><br>
 <?php
     include "connect.php";
+    //include "e-mail.php";
     //verifica a página atual caso seja informada na URL, senão atribui como 1ª página
     $pagina = (isset($_GET['pagina']))? $_GET['pagina'] : 1;
     //seleciona todos os itens da tabela
@@ -47,7 +53,9 @@
       echo "<input type='text' name='sobrenome' value='$sobrenome'><br>";
       echo "E-mail:<br>";
       echo "<input type='text' name='email' value='$email'><br><br>";
-      echo "<input class='btn btn-primary' type='submit' value='Editar'><br><br<br><br>";
+      echo "<input class='btn btn-primary' type='submit' value='Editar'/>";
+      echo "<button type='button' class='btn btn-info' onclick='enviaEmail();'>Enviar e-mail</button><br><br<br><br>";
+      echo "</script>";
       echo "</form>";
       /*Lista Simples
         echo $conteudo['id']." - ";
@@ -56,17 +64,24 @@
         echo $conteudo['email']." - <br>";
         */
     }
+    
     //exibe a paginação
     for($i = 1; $i < $numPaginas + 1; $i++) {
         echo "<h4><a href='list_pages.php?pagina=$i'>".$i."</h4></a> ";
     }
+    
+    
 ?>
 <br><br>
 <a href="index.php" target="_self">Voltar</a><br>
 </div>
+
 <?php
 // tira o resultado da busca da memória
 mysql_free_result($dados);
 ?>
 </body>
+
+
+</script>
 </html>
