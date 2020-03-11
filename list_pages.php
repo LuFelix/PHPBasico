@@ -37,7 +37,7 @@
     //seleciona os itens por página
     $comando = "select * from tbl_usuarios limit $inicio,$registros;";
     $dados = mysqli_query($link,$comando);
-    $total = mysqli_num_rows($link,$dados);
+    //$total = mysqli_num_rows($link,$dados);
     //exibe os dados selecionados
     while ($conteudo = mysqli_fetch_array($dados)) {
       $id = $conteudo['id_usuario'];
@@ -54,9 +54,16 @@
       echo "E-mail:<br>";
       echo "<input type='text' name='email' value='$email'><br><br>";
       echo "<input class='btn btn-primary' type='submit' value='Editar'/>";
-      echo "<button type='button' class='btn btn-info' onclick='enviaEmail();'>Enviar e-mail</button><br><br<br><br>";
+      echo "<a type='button' class='btn btn-info' href='form_email.php'>Enviar e-mail</a><br><br<br><br>";
       echo "</script>";
       echo "</form>";
+
+      /**
+       * substituindo a função no botão de enviar email por "enviaEmail();" 
+       * pode-se enviar diretamente usando o JS ou abrir a página para 
+       * escrever o conteudo
+      */
+      
       /*Lista Simples
         echo $conteudo['id']." - ";
         echo $conteudo['primeiro_nome']." - ";
