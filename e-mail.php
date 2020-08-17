@@ -1,12 +1,13 @@
+<script type="text/javascript" src="functions.js"></script>
 <?php
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
+require 'C:\\Program Files (x86)\\EasyPHP-Devserver-17\\eds-www\\CursoPHPBasico\\PHPBasico\\vendor\\phpmailer\\phpmailer\\src\\PHPMailer.php';
+require 'C:\\Program Files (x86)\\EasyPHP-Devserver-17\\eds-www\\CursoPHPBasico\\PHPBasico\\vendor\\phpmailer\\phpmailer\\src\\SMTP.php';
+require 'C:\\Program Files (x86)\\EasyPHP-Devserver-17\\eds-www\\CursoPHPBasico\\PHPBasico\\vendor\\phpmailer\\phpmailer\\src\\Exception.php';
 
-require '/var/www/html/ProjetoPHPBasico/vendor/phpmailer/phpmailer/src/PHPMailer.php';
-require '/var/www/html/ProjetoPHPBasico/vendor/phpmailer/phpmailer/src/SMTP.php';
-require '/var/www/html/ProjetoPHPBasico/vendor/phpmailer/phpmailer/src/Exception.php';
-//function envia($user,$pass){
-
+function envia($user,$pass){
+   
     $mail = new PHPMailer(); // instancia a classe PHPMailer
     //Suser = getDados();
     //Server settings
@@ -39,5 +40,5 @@ require '/var/www/html/ProjetoPHPBasico/vendor/phpmailer/phpmailer/src/Exception
     }else{
         echo "E-mail enviado com sucesso!\n Obrigado por usar nosso serviço!";
     }
-//}
+}
 ?>

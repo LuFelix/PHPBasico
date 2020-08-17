@@ -2,7 +2,7 @@
 
 $host = "localhost";
 $user = "root";
-$pass = "root";
+$pass = "";
 $db = "sistpag";
 
 $link = mysqli_connect($host,$user,$pass,$db);

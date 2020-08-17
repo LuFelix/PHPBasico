@@ -17,6 +17,9 @@
     <a href="form_find.php" target="_self">Pesquisar</a><br><br>
     <a href="list.php" target="_self">Lista Completa</a><br><br>
     <a href="list_pages.php" target="_self">Lista Paginada</a><br><br>
+    <a href="wooconnect/viewPedidos.php" target="_self">Lista de Pedidos</a><br><br>
+    <a href="nfe/viewNfe.php" target="_self">Lista de NFes</a><br><br>
+
   </div>
 </body>
 <footer>

@@ -85,7 +85,7 @@
 
 <?php
 // tira o resultado da busca da memória
-mysql_free_result($dados);
+mysql_free_result($conteudo);
 ?>
 </body>
 
